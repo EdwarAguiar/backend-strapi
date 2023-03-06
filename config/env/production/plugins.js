@@ -1,5 +1,6 @@
-module.exports = {
+module.exports = () => ({
   graphql: {
+    enabled: true,
     config: {
       endpoint: '/graphql',
       shadowCRUD: true,
@@ -7,9 +8,11 @@ module.exports = {
       depthLimit: 10,
       amountLimit: 100,
       apolloServer: {
-        tracing: false,
+        tracing: true,
         introspection: true,
       },
     }
   },
-};
+});
+
+
